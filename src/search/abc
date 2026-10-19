@@ -1,0 +1,69 @@
+
+
+    <React.Fragment>
+  
+      <Dialog
+        open={open}
+        onClose={handleClose}
+      PaperProps={{
+    sx: {
+      backgroundColor: 'transparent',
+      boxShadow: 'none',
+    },
+  }}
+
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+        role="alertdialog"
+      >
+      
+  
+       <div>   <div className='flex justify-center items-center mb-10  mobiledialogsearch '>
+        <div className='searchinmobile'>
+        <input className = "border  p-5 searchbar " type='text'
+        placeholder='e.g. Asad bought iPhone 15 for 300k'
+
+          onChange={onchange}
+        
+        />
+      </div></div>
+      <div className='ButtonSubmit'>
+        <button className='' onClick={submit}>
+        <Box sx={{ display: 'flex', alignItems: 'center' }} >
+      <Box sx={{ m: 1, position: 'relative' }}>
+        <Fab
+          aria-label="save"
+          color="warning"
+          sx={{
+          ...buttonSx,
+        
+          width: 40,
+          height: 40,
+          minHeight: 40,
+        }}
+          
+        >
+          {success ? <CheckIcon /> : <GrFormNextLink className='text-[29px]'/>}
+        </Fab>
+        {loading && (
+          <CircularProgress
+            aria-label="Loading…"
+            size={48}
+            sx={{
+            color: green[500],
+            position: 'absolute',
+            top: -4,
+            left: -4,
+            zIndex: 1,
+          }}
+          />
+        )}
+      </Box>
+    
+    </Box>
+
+        </button>
+           <Toaster />
+      </div></div>
+      </Dialog>
+    </React.Fragment>
