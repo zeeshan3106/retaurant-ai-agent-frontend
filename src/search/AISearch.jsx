@@ -169,7 +169,7 @@ const [loading, setLoading] = React.useState(false);
       <div className='bg-white w-[80%] middle shadow '>
     <div className='apple flex items-center justify-center pt-15 pb-5 mobile'>
       <div className='flex '>
-       Home Analytics Chat
+       Restaurant Assistant
 
       </div>
     
@@ -183,7 +183,7 @@ const [loading, setLoading] = React.useState(false);
     <input
       className="search-input "
       type="text"
-      placeholder="e.g.Product bought for 1000..."
+      placeholder="e.g.Breakfast, Lunch, Dinner..."
       onChange={onchange}
       value={apple}
     />
